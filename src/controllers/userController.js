@@ -5,7 +5,7 @@ const getUsers = async (req, res) => {
     statusCode: 200,
     data: [{
       name: "Yatin",
-      city: "Pune"
+      city: "Dhule"
     }],
     message: "List of users fetched successfully.",
   });
