@@ -3,7 +3,10 @@
 const getUsers = async (req, res) => {
   res.json({
     statusCode: 200,
-    data: [],
+    data: [{
+      name: "Yatin",
+      city: "Pune"
+    }],
     message: "List of users fetched successfully.",
   });
 };
