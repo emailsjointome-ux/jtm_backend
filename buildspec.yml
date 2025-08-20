@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing deps..."
+      - npm ci --only=production
+  build:
+    commands:
+      - echo "Zipping Lambda package..."
+      - zip -r function.zip . -x '*.git*' 'function.zip'
+artifacts:
+  files:
+    - function.zip
